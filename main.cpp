@@ -64,9 +64,11 @@ unordered_map<string, string> get_user_details(string user = current_user) {
             user_details["name"] = username_db;
             user_details["password"] = password_db;
             user_details["amount"] = amount_db;
+	    fin.close();
             return user_details;
         }
     }
+    fin.close();
     return user_details;
 }
 
